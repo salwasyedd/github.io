@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Salwa Syed</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Salwa Syed</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Salwa Syed" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#waph">WAPH</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Salwa
+                        <span class="text-primary">Syed</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Cincinnati, OH · (513)-652-8946 ·
+                        <a href="mailto:syed.salwa02@gmail.com">syed.salwa02@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Computer Science student at the University of Cincinnati with a minor in Organizational Leadership. Experienced in full-stack development, AI/ML pipelines, and cloud infrastructure through multiple software engineering internships at GE Aerospace. Passionate about building scalable, impactful technology solutions.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/salwasyed" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/salwasyedd" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <br>
+                    <!-- Digital Clock -->
+                    <p id="digital-clock" style="font-size:1.1rem; font-weight:bold;"></p>
+                    <!-- Analog Clock -->
+                    <canvas id="analog-clock" width="150" height="150"></canvas>
+                    <br><br>
+                    <!-- Show/Hide Email -->
+                    <p>Email: <span id="email-display" style="display:none">syed.salwa02@gmail.com</span>
+                    <button onclick="toggleEmail()" class="btn btn-primary btn-sm">Show/Hide Email</button></p>
+                    <br>
+                    <!-- WAPH Link -->
+                    <p><a href="waph.html">View my Web Application Programming and Hacking Course Page</a></p>
+                    <br>
+                    <!-- Flag Counter -->
+                    <a href="https://info.flagcounter.com/o8yv"><img src="https://s01.flagcounter.com/count2/o8yv/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>                    <br><br>
+                    <!-- Joke Section -->
+                    <div id="joke-section" style="margin-top:10px; padding:10px; background:#f8f9fa; border-radius:5px;">
+                        <b>Joke of the Minute:</b>
+                        <p id="joke-text"></p>
+                        <small><i>Disclaimer: Jokes are generated by JokeAPI (v2.jokeapi.dev). I am not responsible for the content.</i></small>
+                    </div>
+                    <br>
+                    <!-- Dog Image Section -->
+                    <div id="dog-section" style="margin-top:10px;">
+                        <b>Random Dog of the Day:</b><br>
+                        <img id="dog-image" src="" alt="Random Dog" style="max-width:300px; border-radius:10px; margin-top:5px;">
+                        <br><small><i>Disclaimer: Images are provided by Dog CEO API (dog.ceo). I am not responsible for the content.</i></small>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Data Science Intern</h3>
+                            <div class="subheading mb-3">GE Aerospace | Cincinnati, OH</div>
+                            <p>Integrated AWS Textract (OCR) and Bedrock (LLM) to extract and analyze complex PDFs to increase efficiency. Optimized AI pipeline automation, cutting engineer processing time from 4 hours to 25 minutes. Architected Python backend transforming multimodal data into structured insights via AWS (S3, Transcribe, Bedrock). Designed a full AWS pipeline enabling automated data capture, processing, and storage for multimodal inputs.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2026 – May 2026</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineer Intern</h3>
+                            <div class="subheading mb-3">GE Aerospace | Cincinnati, OH</div>
+                            <p>Built an AWS Q Business chatbot, reducing AI team support workload by 3 hours daily. Completed IDNA Boot Camp, applying frameworks to design strategic, user-focused AI solutions. Deployed AWS AI infrastructure (KMS, S3, SageMaker), accelerating secure, scalable enterprise adoption. Researched and developed AWS Q Business RAGaaS, cutting development from 6+ weeks to 3-4 hours.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">May 2025 – August 2025</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineer Intern</h3>
+                            <div class="subheading mb-3">GE Aerospace | Cincinnati, OH</div>
+                            <p>Backend Developer on Customer Warranty Portals team supporting Java Service Upgrade and Postgres Migration. Improved security and efficiency by conducting 50 unit tests, testing 40 endpoints, and fixing 10 broken endpoints. Resolved 100+ security vulnerabilities by refactoring legacy API endpoints to REST standards. Enhanced database performance by refactoring and creating 40 RESTful APIs.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2024 – December 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineer Intern</h3>
+                            <div class="subheading mb-3">GE Aerospace | Cincinnati, OH</div>
+                            <p>Full-stack Developer on Aviation Testing Analytics (ATA) team. Automated test reporting via Python-based scorecard with email distribution, reducing manual reporting time by 70%. Built dynamic scorecard templates applied to two additional engine product lines, standardizing analytics across 25 teams. Enhanced user experience by collaborating with UX designers and interviewing six engineers to identify customer pain points.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2024 – April 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Basketball Coordinator & Youth Counselor</h3>
+                            <div class="subheading mb-3">Islamic Center of Greater Cincinnati | Cincinnati, OH</div>
+                            <p>Designed curriculum, led classroom activities, mentored 45 youth, and fostered personal and social development. Coached and developed 15 athletes per year across 3 teams, organized program operations, and fostered teamwork.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">October 2016 – Present</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Cincinnati</h3>
+                            <div class="subheading mb-3">Bachelor of Science, Computer Science | Minor, Organizational Leadership</div>
+                            <div>College of Engineering and Applied Science</div>
+                            <p>GPA: 3.8</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Expected May 2027</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-aws"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-git-alt"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Technologies & Platforms</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Python, HTML/CSS, SQL
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            AWS (Bedrock, Textract, S3, SageMaker, KMS, Transcribe, Q Business)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Git, VS Code, Google G Suite, Notion
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Full-Stack Development, REST APIs, AI/ML Pipelines
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Outside of computer science, I am passionate about leadership and community building. I enjoy mentoring youth, organizing community events, and developing programs that bring people together.</p>
+                    <p class="mb-0">I am also interested in the intersection of technology and social impact, particularly how AI and cloud computing can be leveraged to solve real-world problems at scale.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Leadership</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Dawin T. Turner Scholar
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Cincinnatus Scholar
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Students in STEM Scholar
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            P&G Scholar
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Dean's List
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Vice President – UC Association for Computing Machinery for Women (Apr 2025 – Present)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            President – Muslim Youth of North America (Sep 2022 – Sep 2024)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Organized $63,330 in funding to send 67 students to Grace Hopper Celebration (2023, 2024, 2025)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- WAPH Section -->
+            <section class="resume-section" id="waph">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Web Application Programming and Hacking</h2>
+                    <p>This section introduces the WAPH course taught by Dr. Phu Phung at the University of Cincinnati.</p>
+                    <a href="waph.html" class="btn btn-primary">View WAPH Course Page</a>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+        // Digital Clock
+        function displayTime() {
+            document.getElementById("digital-clock").innerHTML =
+                "Current time: " + new Date().toLocaleString();
+        }
+        setInterval(displayTime, 1000);
+        displayTime();
+
+        // Show/Hide Email
+        function toggleEmail() {
+            var email = document.getElementById("email-display");
+            email.style.display = email.style.display === "none" ? "inline" : "none";
+        }
+
+        // Analog Clock
+        var canvas = document.getElementById("analog-clock");
+        var ctx = canvas.getContext("2d");
+        function drawClock() {
+            var now = new Date();
+            var hours = now.getHours() % 12;
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            ctx.clearRect(0, 0, 150, 150);
+            // Clock face
+            ctx.beginPath();
+            ctx.arc(75, 75, 70, 0, 2 * Math.PI);
+            ctx.strokeStyle = "#333";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            // Hour hand
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            var hourAngle = (hours + minutes / 60) * 2 * Math.PI / 12 - Math.PI / 2;
+            ctx.lineTo(75 + 35 * Math.cos(hourAngle), 75 + 35 * Math.sin(hourAngle));
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = "#333";
+            ctx.stroke();
+            // Minute hand
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            var minAngle = minutes * 2 * Math.PI / 60 - Math.PI / 2;
+            ctx.lineTo(75 + 50 * Math.cos(minAngle), 75 + 50 * Math.sin(minAngle));
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "#333";
+            ctx.stroke();
+            // Second hand
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            var secAngle = seconds * 2 * Math.PI / 60 - Math.PI / 2;
+            ctx.lineTo(75 + 60 * Math.cos(secAngle), 75 + 60 * Math.sin(secAngle));
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+        }
+        setInterval(drawClock, 1000);
+        drawClock();
+
+        // Joke API - refresh every 1 minute
+        function getJoke() {
+            $.get("https://v2.jokeapi.dev/joke/Any?type=single", function(result) {
+                if (result && result.joke) {
+                    $("#joke-text").text(result.joke);
+                }
+            });
+        }
+        getJoke();
+        setInterval(getJoke, 60000);
+
+        // Dog CEO API
+        async function getDogImage() {
+            const response = await fetch("https://dog.ceo/api/breeds/image/random");
+            const result = await response.json();
+            if (result && result.message) {
+                document.getElementById("dog-image").src = result.message;
+            }
+        }
+        getDogImage();
+
+        // Cookies - welcome message
+        function setCookie(name, value, days) {
+            var expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
+        }
+        function getCookie(name) {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.startsWith(name + "=")) {
+                    return cookie.substring(name.length + 1);
+                }
+            }
+            return null;
+        }
+        var lastVisit = getCookie("lastVisit");
+        var now = new Date().toLocaleString();
+        if (!lastVisit) {
+            alert("Welcome to my homepage for the first time!");
+        } else {
+            alert("Welcome back! Your last visit was " + lastVisit);
+        }
+        setCookie("lastVisit", now, 30);
+        </script>
+    </body>
+</html>
